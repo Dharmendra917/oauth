@@ -1,0 +1,22 @@
+1: go to passport.js documentation
+2: Copy '/login' route and paste inside index.js
+3: Make login page and add '/login/federated/google' in <a> tag.
+4: Now require passport and google strategy. (install passport and passport-google-iodc thorugh npm i)
+5: Register your app on google cloud paltform console.
+6: Create .env file(in root) and paste the following client ID and Clinent Secrets.
+                     (install dotenv package) and require (require(dotenv).config()  )
+7: now copy google strategy code and paste inside index.js, remove my sql code. 
+               add mongoDB code add email inside scope option.
+8: Add express-session inside app.js and add session code inside app.js(install express-session)
+9: Add redirect Back to app route inside index.js
+10: Create user Schema inside user.js and add the following code google strategy
+11: Install mognoStore (npm i connet-mongo) and add store code inside session
+    app.use(session({
+        Secret : "gk;dlk",
+        resave : "false",
+        saveUninitialized: false,
+        store : MongoStore.create({          //  that code 
+            mongoUrl : "mongodb://localhost:27017/google",
+            autoRemove : 'disabled',
+        })
+    }))
